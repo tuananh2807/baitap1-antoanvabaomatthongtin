@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Bộ công cụ mã hóa (Caesar, Vigenère, Affine, Playfair, Hoán vị)</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+		<h1>Bộ công cụ mã hóa của Tuấn Anh</h1>
+		<p>k225480106001</p>
+	</header>
+
+	<!-- Added navigation bar to choose a tool -->
+	<nav class="tool-nav" role="navigation">
+		<button data-target="caesar" class="nav-btn">Caesar</button>
+		<button data-target="vigenere" class="nav-btn">Vigenère</button>
+		<button data-target="affine" class="nav-btn">Affine</button>
+		<button data-target="playfair" class="nav-btn">Playfair</button>
+		<button data-target="permutation" class="nav-btn">Hoán vị</button>
+	</nav>
+
+	<main id="tools">
+		<section id="caesar" class="card">
+			<h2>Caesar Cipher</h2>
+			<textarea id="caesar-text" placeholder="Nhập chuỗi..."></textarea>
+			<div class="row">
+				<label>Shift: <input id="caesar-shift" type="number" value="3" /></label>
+				<button id="caesar-encrypt">Mã hóa</button>
+				<button id="caesar-decrypt">Giải mã</button>
+			</div>
+			<pre id="caesar-result" class="result"></pre>
+		</section>
+
+		<section id="vigenere" class="card">
+			<h2>Vigenère Cipher</h2>
+			<textarea id="vigenere-text" placeholder="Nhập chuỗi..."></textarea>
+			<div class="row">
+				<label>Khóa: <input id="vigenere-key" type="text" placeholder="ví dụ: SECRET" /></label>
+				<button id="vigenere-encrypt">Mã hóa</button>
+				<button id="vigenere-decrypt">Giải mã</button>
+			</div>
+			<pre id="vigenere-result" class="result"></pre>
+		</section>
+
+		<section id="affine" class="card">
+			<h2>Affine Cipher</h2>
+			<textarea id="affine-text" placeholder="Nhập chuỗi..."></textarea>
+			<div class="row">
+				<label>a: <input id="affine-a" type="number" value="5" /></label>
+				<label>b: <input id="affine-b" type="number" value="8" /></label>
+				<button id="affine-encrypt">Mã hóa</button>
+				<button id="affine-decrypt">Giải mã</button>
+			</div>
+			<pre id="affine-result" class="result"></pre>
+		</section>
+
+		<section id="playfair" class="card">
+			<h2>Playfair Cipher</h2>
+			<textarea id="playfair-text" placeholder="Nhập chuỗi..."></textarea>
+			<div class="row">
+				<label>Khóa: <input id="playfair-key" type="text" placeholder="ví dụ: MONARCHY" /></label>
+				<button id="playfair-encrypt">Mã hóa</button>
+				<button id="playfair-decrypt">Giải mã</button>
+			</div>
+			<pre id="playfair-result" class="result"></pre>
+		</section>
+
+		<section id="permutation" class="card">
+			<h2>Hoán vị (Permutation) Cipher</h2>
+			<textarea id="perm-text" placeholder="Nhập chuỗi..."></textarea>
+			<div class="row">
+				<label>Khóa (chỉ số cách nhau bởi khoảng trắng): <input id="perm-key" type="text" placeholder="ví dụ: 2 0 1" /></label>
+				<button id="perm-encrypt">Mã hóa</button>
+				<button id="perm-decrypt">Giải mã</button>
+			</div>
+			<pre id="perm-result" class="result"></pre>
+		</section>
+	</main>
+
+	<footer>
+		<small>TRƯỜNG ĐẠI HỌC KỸ THUẬT CÔNG NGHIỆP THÁI NGUYÊN </small>
+	</footer>
+
+	<script src="scripts.js"></script>
+</body>
+</html>

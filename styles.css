@@ -1,0 +1,40 @@
+:root{
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	color: #222222;
+	background: #efafe3;
+}
+body{ margin: 0; padding: 20px; }
+header{ text-align:center; margin-bottom: 20px; }
+main{ display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 16px; }
+.card{ background: rgb(142, 199, 230); padding: 12px 14px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06); }
+textarea{ width:100%; min-height:80px; padding:8px; resize: vertical; font-family: inherit; }
+.row{ display:flex; gap:8px; align-items:center; margin-top:8px; flex-wrap:wrap; }
+input[type="text"], input[type="number"]{ padding:6px; }
+button{ padding:6px 10px; border-radius:6px; border: none; background:#ff0bef; color:rgb(255, 255, 255); cursor:pointer; }
+button:hover{ opacity:0.95; }
+.result{ background:#f1faff; padding:8px; border-radius:6px; min-height:28px; white-space:pre-wrap; }
+footer{ text-align:center; margin-top:18px; color:#666; }
+/* Navigation bar for selecting cipher */
+.tool-nav {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin: 12px 0;
+	justify-content: center;
+}
+.tool-nav .nav-btn {
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	background: rgb(111, 186, 214);
+	cursor: pointer;
+}
+.tool-nav .nav-btn.active {
+	background: #ff0bda;
+	color: #ffffff;
+	border-color: rgba(11,103,255,0.15);
+	box-shadow: 0 2px 6px rgba(11, 210, 255, 0.12);
+}
+
+/* utility to hide sections */
+.hidden { display: none !important; }
